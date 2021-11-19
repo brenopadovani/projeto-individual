@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutNews| Página Inicial</title>
+    <script src="./assets/js/funcoes.js"></script>
+
+    <link rel="icon" href="./assets/icon/futnews.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+            <h1>FutNews</h1>
+            <ul class="navbar">
+                <li>
+                    <a href="./dashboard.html">VOLTAR</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="simulacao">
+        <img src="ranking gols.png" style="width: 900px;"><br><br>
+    </div>
+    
+    <div class="jogos">
+        <h2>Campeonato Brasileiro</h2>
+        <h4>Rodada 31 de 38:</h4>
+        <p>SAN X BRG</p>
+        <p>CAM X COR</p>
+        <p>PAL X ACG</p>
+        <p>GRE X FLU</p>
+        <p>CAP X CEA</p>
+        <p>FOR X SPA</p>
+        <p>SPT X AMG</p>
+        <p>JUV X INT</p>
+        <p>FLA X BAH</p>
+
+        <button onclick="mostrar()" style="background-color: green;">Acompanhar em tempo real</button>
+
+        <div id="div_um"></div>
+
+    </div>
+    
+</body>
+
+</html>
+<script>
+    var san = ((Math.random()) * 4);
+    var brg = ((Math.random()) * 4);
+    var cam = ((Math.random()) * 4);
+    var cor = ((Math.random()) * 4);
+    var pal = ((Math.random()) * 4);
+    var acg = ((Math.random()) * 4);
+    var gre = ((Math.random()) * 4);
+    var flu = ((Math.random()) * 4);
+    var cap = ((Math.random()) * 4);
+    var cea = ((Math.random()) * 4);
+    var fort = ((Math.random()) * 4);
+    var spa = ((Math.random()) * 4);
+    var spt = ((Math.random()) * 4);
+    var amg = ((Math.random()) * 4);
+    var juv = ((Math.random()) * 4);
+    var int = ((Math.random()) * 4);
+    var fla = ((Math.random()) * 4);
+    var bah = ((Math.random()) * 4);
+
+
+
+
+
+    var n = 0;
+    div_um.innerHTML = "";
+
+    function mostrar() {
+
+        for (n = 1; n <= 1; n++)
+            div_um.innerHTML += `<h3>Resultados:</h3>
+           <p> SAN <b> ${ san.toFixed(0)}</b> X  <b> ${brg.toFixed(0)}</b> BRG </p> `
+
+
+        for (n = 1; n <= 1; n++)
+            div_um.innerHTML += `
+            <p> CAM <b> ${ cam.toFixed(0)}</b> X  <b> ${cor.toFixed(0)}</b> COR </p> `
+
+
+        for (n = 1; n <= 1; n++)
+            div_um.innerHTML += `
+            <p> PAL <b> ${ pal.toFixed(0)}</b> X  <b> ${acg.toFixed(0)}</b> ACG </p> `
+
+        for (n = 1; n <= 1; n++)
+            div_um.innerHTML += `
+            <p> GRE <b> ${ gre.toFixed(0)}</b> X  <b> ${flu.toFixed(0)}</b> FLU </p> `
+
+        for (n = 1; n <= 1; n++)
+            div_um.innerHTML += `
+            <p> CAP <b> ${cap.toFixed(0)}</b> X  <b> ${cea.toFixed(0)}</b> CEA </p> `
+
+        for (n = 1; n <= 1; n++)
+            div_um.innerHTML += `
+            <p> FOR <b> ${fort.toFixed(0)}</b> X  <b> ${spa.toFixed(0)}</b> SPA </p> `
+
+
+        for (n = 1; n <= 1; n++)
+            div_um.innerHTML += `
+            <p> SPT <b> ${spt.toFixed(0)}</b> X  <b> ${amg.toFixed(0)}</b> AMG </p> `
+
+        for (n = 1; n <= 1; n++)
+            div_um.innerHTML += `
+            <p> JUV <b> ${juv.toFixed(0)}</b> X  <b> ${int.toFixed(0)}</b> INT </p> `
+
+        for (n = 1; n <= 1; n++)
+            div_um.innerHTML += `
+            <p> FLA <b> ${fla.toFixed(0)}</b> X  <b> ${bah.toFixed(0)}</b> BAH </p> `
+
+    }
+</script>

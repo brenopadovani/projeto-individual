@@ -267,7 +267,7 @@ form {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border-right: 3px solid #32B9CD;
+    border-right: 4px solid #2f9600;
     background-color: #212124;
     /* border: 3px solid pink; */
 }
@@ -283,7 +283,7 @@ form {
 }
 
 .header-left h1 {
-    color: #32B9CD;
+    color: #2f9600;
 }
 
 .hello {
@@ -293,7 +293,7 @@ form {
 }
 
 .hello h3 {
-    color: #E3B062;
+    color: #2f9600;
     font-weight: 300;
     font-size: 1.2rem;
 }
@@ -305,7 +305,7 @@ form {
 .btn-nav {
     width: 40%;
     color: white;
-    background-color: #E6005A;
+    background-color: #2f9600;
     border-radius: 5px;
     text-align: center;
     padding: 2% 5%;
@@ -314,14 +314,14 @@ form {
 .btn-nav-white {
     width: 40%;
     background-color: white;
-    border: 3px solid #E6005A;
+    border: 3px solid #2f9600;
     border-radius: 5px;
     text-align: center;
     padding: 2% 5%;
 }
 
 .btn-nav-white h3 {
-    color: #E6005A;
+    color: #2f9600;
     padding: 0;
     margin: 0;
 }
@@ -336,8 +336,8 @@ form {
     margin: 0;
     padding: 0;
     width: 20%;
-    background-color: #32B9CD;
-    color: white;
+    background-color: white;
+    color: #2f9600;
     border-radius: 10px;
     text-align: center;
     padding: 10px 15px;
@@ -348,4 +348,42 @@ form {
 /* pagina extra - simulador */
 .sobre {
     color: rgb(0, 0, 0);
+}
+
+.cardmedio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#2f9600 ;
+}
+.cardmedio select{
+    border-radius: 10px;
+    height: 35px;
+}
+.time{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.graph{
+display: flex;
+justify-content: center;
+margin-left: 300px;
+width: 78%;
+height: 200%;
+}
+
+.simulacao{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+ .jogos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }

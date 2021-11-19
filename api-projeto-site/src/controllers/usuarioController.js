@@ -63,15 +63,17 @@ function cadastrar(req, res) {
     var nome = req.body.nome;
     var email = req.body.email;
     var senha = req.body.senha;
-
+    var times = req.body.times;
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
     } else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
-        res.status(400).send("Sua senha está undefined!");
+        res.status(400).send("Sua senha está undefined!");}
+        else if (times == undefined) {
+            res.status(400).send("Seu time está undefined!");
     } else {
-        usuarioModel.cadastrar(nome, email, senha)
+        usuarioModel.cadastrar(nome, email, senha, times)
         .then(
             function (resultado) {
                 res.json(resultado);

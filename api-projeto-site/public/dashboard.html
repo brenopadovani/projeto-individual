@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PÁGINA DASHBOARD</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutNews | Página Inicial</title>
+  <link rel="icon" href="./assets/icon/futnews.ico">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="../assets/js/funcoes.js"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- scripts do Chart.js -->
+  <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+
 </head>
-<body>
-    <h1>Página de dashboard a ser criada na próxima aula!</h1>
+
+<body onload="validarSessao()">
+  <!-- <div class="janela"> -->
+  <div class="header-left">
+
+
+    <div class="header">
+      <div class="container">
+        <h1>FutNews</h1>
+
+      </div>
+    </div>
+
+    <div class="hello">
+      <h3>Olá, <span id="b_usuario"></span>!</h3><br>
+    </div>
+    <div class="time">
+      <br>
+      <h3>Seu time é:<img id="b_times" src="" style="width: 30px; height: 30px;"></h3>
+    </div>
+    <div class="btn-nav-white">
+      <a href="./simulador.html">
+        <h3>Notícias</h3>
+      </a>
+    </div>
+
+    <div class="btn-nav">
+
+      <h3>Gráficos</h3>
+
+    </div>
+
+    <div class="btn-nav-white">
+      <a href="./aovivo.html">
+        <h3>Rodada do Brasileirão</h3>
+      </a>
+    </div>
+
+    <div class="btn-logout" onclick="limparSessao()">
+      <h3>Sair</h3>
+    </div>
+
+  </div>
+
+    <div class="graph">
+   
+
+
+        <img src="brasil.gif" style="width: 100%;height: 100%;">
+
+
+
+    </div>
+  </div>
+  </div>
+
+
 </body>
+
 </html>

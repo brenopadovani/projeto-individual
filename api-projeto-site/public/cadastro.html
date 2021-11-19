@@ -8,10 +8,10 @@
 
     <title>FutNews | Página Inicial</title>
 
-    
+
     <script src="./assets/js/funcoes.js"></script>
-    
-    
+
+
     <link rel="icon" href="./assets/icon/futnews.ico">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,13 +32,11 @@
                         Inicial
                     </a>
                 </li>
-                <li>
-                    <a href="./simulador.html">Notícias</a>    
-                </li>
                 <li>|</li>
-                <li >
+                <li>
                     <a href="./login.html">Login</a>
                 </li>
+                <li>|</li>
                 <li class="agora">
                     <a href="./cadastro.html">Cadastro</a>
                 </li>
@@ -49,15 +47,15 @@
 
     <div class="banner-login ">
         <div class="container ">
-            <div class="card medio">
-                <h2>Bem-vindo!</h2>
+            <div class="cardmedio">
+                <h3> Se cadastre, para receber as noticias. </h3>
                 <div class="formulario">
                     <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
                         Nome:
-                        <input name="nome" type="text" placeholder="Ada Lovelace">
+                        <input name="nome" type="text" placeholder="Coloque seu nome">
                         <br>
                         E-mail:
-                        <input name="email" type="text" placeholder="meuemail@provedor.com">
+                        <input name="email" type="text" placeholder="email@provedor.com">
                         <br>
                         Senha:
                         <input name="senha" type="password" placeholder="******">
@@ -65,15 +63,41 @@
                         Confirmação da Senha:
                         <input name="confirmacao-senha" type="password" placeholder="******">
                         <br>
+                        Escolha seu time da Serie A:
+                        <select id="times" name="times">
+                            <option value="--">--</option>
+                            <option value="1">Atlético-MG</option>
+                            <option value="2">Flamengo</option>
+                            <option value="3">Palmeiras</option>
+                            <option value="4">Bragantino</option>
+                            <option value="5">Corinthians</option>
+                            <option value="6">Fortaleza</option>
+                            <option value="7">Internacional</option>
+                            <option value="8">Fluminense</option>
+                            <option value="9">América-MG</option>
+                            <option value="10">Ceará</option>
+                            <option value="11">Santos</option>
+                            <option value="12">Cuiabá</option>
+                            <option value="13">Athletico-PR</option>
+                            <option value="14">São Paulo</option>
+                            <option value="15">Juventude</option>
+                            <option value="16">Atlético-GO</option>
+                            <option value="17">Bahia</option>
+                            <option value="18">Grêmio</option>
+                            <option value="19">Sport</option>
+                            <option value="20">Chapecoense</option>
+
+                        </select>
+                        <br>
                         <button class="btn">Cadastrar</button>
                     </form>
                 </div>
                 <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                    <img src="./assets/aguarde-orange.gif" id="loading-gif">
                 </div>
 
                 <div id="div_erros_login">
-                    
+
                 </div>
             </div>
         </div>
@@ -86,14 +110,13 @@
         </div>
     </div>
     <!--footer fim-->
-    
+
 
 </body>
 
 </html>
 
 <script>
-
     function limparFormulario() {
         document.getElementById("form_cadastro").reset();
     }
@@ -105,35 +128,39 @@
 
         var nome = formulario.get("nome");
         var email = formulario.get("email");
+        var times = formulario.get("times");
         var senha = formulario.get("senha");
         var confirmacaoSenha = formulario.get("confirmacao-senha");
 
         // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
         if (nome == "" || email == "" || senha == "" || confirmacaoSenha == "") {
-            
+
             window.alert("Preencha todos os campos para prosseguir!");
-            if (nome == "")  {
+            if (nome == "") {
                 console.log('nome está em branco')
             }
-            if (email == "" )  {
+            if (email == "") {
                 console.log('email está em branco')
             }
-            if (senha == "" )  {
+            if (senha == "") {
                 console.log('senha está em branco')
             }
-            if (confirmacaoSenha == "" )  {
+            if (confirmacaoSenha == "") {
                 console.log('confirmacaoSenha está em branco')
             }
+            if (times == "") {
+                console.log('Escolha um time')}
+                
             finalizarAguardar();
             return false;
         }
-        
+
         if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
             window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
             finalizarAguardar();
             return false;
         }
-        
+
         if (senha != confirmacaoSenha) {
             window.alert("As senhas inseridas devem ser iguais para prosseguir!");
             finalizarAguardar();
@@ -153,7 +180,7 @@
                 limparFormulario();
                 finalizarAguardar();
             } else {
-                throw("Houve um erro ao tentar realizar o cadastro!");
+                throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
@@ -162,5 +189,4 @@
 
         return false;
     }
-
 </script>

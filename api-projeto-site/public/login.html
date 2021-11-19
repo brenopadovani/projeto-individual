@@ -30,13 +30,11 @@
                         Inicial
                     </a>
                 </li>
-                <li>
-                    <a href="./simulador.html">Notícias</a>    
-                </li>
                 <li>|</li>
                 <li class="agora">
                     <a href="./login.html">Login</a>
                 </li>
+                <li>|</li>
                 <li>
                     <a href="./cadastro.html">Cadastro</a>
                 </li>
@@ -146,6 +144,7 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.TIMES_USUARIO = json.fktimes;
 
                     setTimeout(function () {
                         window.location = "./dashboard.html";

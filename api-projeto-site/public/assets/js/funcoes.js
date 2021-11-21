@@ -25,7 +25,7 @@ function validarSessao() {
         }
 
         if (times == 3) {
-            b_times.src = "https://w7.pngwing.com/pngs/177/904/png-transparent-sociedade-esportiva-palmeiras-campeonato-paulista-copa-do-brasil-choque-rei-paulista-derby-futebol-brasil-emblem-sport-logo.png"
+            b_times.src = "https://www.pngfind.com/pngs/m/486-4868091_escudo-palmeiras-logo-palmeiras-dream-league-soccer-2019.png"
         }
 
         if (times == 4) {
@@ -55,8 +55,45 @@ function validarSessao() {
         if (times == 10) {
             b_times.src = "https://logodetimes.com/times/ceara/logo-ceara-256.png"
         }
+
+        if (times == 11) {
+            b_times.src = "https://logodownload.org/wp-content/uploads/2017/02/santos-logo-escudo.png"
+        }
+
+        if (times == 12) {
+            b_times.src = "https://logodetimes.com/times/cuiaba/logo-cuiaba-2048.png"
+        }
+
+        if (times == 13) {
+            b_times.src = "https://upload.wikimedia.org/wikipedia/pt/c/c7/Club_Athletico_Paranaense_2019.png"
+        }
+
         if (times == 14) {
             b_times.src = "https://logodownload.org/wp-content/uploads/2016/09/sao-paulo-logo-escudo-1.png"
+        }
+
+        if (times == 15) {
+            b_times.src = "https://logodownload.org/wp-content/uploads/2017/02/ec-juventude-logo-escudo.png"
+        }
+
+        if (times == 16) {
+            b_times.src = "https://logodetimes.com/times/atletico-goianiense/logo-atletico-goianiense-1024.png"
+        }
+
+        if (times == 17) {
+            b_times.src = "https://logodownload.org/wp-content/uploads/2017/02/e-c-bahia-logo-escudo.png"
+        }
+
+        if (times == 18) {
+            b_times.src = "https://logodownload.org/wp-content/uploads/2017/02/gremio-logo-escudo-2.png"
+        }
+
+        if (times == 19) {
+            b_times.src = "https://logodownload.org/wp-content/uploads/2017/02/sport-recife-logo-escudo-1.png"
+        }
+
+        if (times == 20) {
+            b_times.src = "https://logodownload.org/wp-content/uploads/2016/09/chapecoense-logo-escudo-shield-4.png"
         }
 
         // finalizarAguardar();

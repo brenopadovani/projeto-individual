@@ -95,10 +95,10 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Norte', 'Nordeste', 'Sudeste', 'Sul', 'Centro-Oeste'],
+        labels: ['São Paulo', 'Rio de Janeiro', 'Rio Grande do Sul', 'Minas Gerais', 'Paraná'],
         datasets: [{
-            label: 'Media do Salario por Região',
-            data: [1.711, 1.539, 2.585, 2.499, 2.498],
+            label: 'Maiores Campeões por Estados',
+            data: [32, 17, 5, 5, 2],
             backgroundColor: [
                 '#2f9600',
                 '#2f9600',
@@ -130,10 +130,10 @@ var ctx2 = document.getElementById('myChart2').getContext('2d');
 var myChart2 = new Chart(ctx2, {
     type: 'line',
     data: {
-      labels: ['Brasil(Total)','Norte','Nordeste','Sudeste','Sul','Centro-Oeste'],
+      labels: ['Palmeiras','Santos','Flamengo','Corinthians','São Paulo'],
   datasets: [{
-    label: 'Desemprego por região',
-    data: [11,10.6,13.6,11.4,6.8,9.3],
+    label: 'Maiores Campeões Brasileiros',
+    data: [10,8,8,7,6],
     fill: false,
     borderColor: '#2f9600',
     tension: 0.1

@@ -25,7 +25,7 @@ function validarSessao() {
         }
 
         if (times == 3) {
-            b_times.src = "https://www.pngfind.com/pngs/m/486-4868091_escudo-palmeiras-logo-palmeiras-dream-league-soccer-2019.png"
+            b_times.src = "https://sep-bucket-prod.s3.amazonaws.com/wp-content/uploads/2021/10/escudos-inst_1.png"
         }
 
         if (times == 4) {

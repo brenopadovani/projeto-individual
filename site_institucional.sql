@@ -16,8 +16,6 @@ senha char (8),
 fktimes int,
 foreign key (fktimes) references times(idTimes)
 );
-select * from cadastro join times on fktimes = idTimes;
-drop table times;
 
 insert into times values
 (null, 'Atlético-MG'),
@@ -40,3 +38,9 @@ insert into times values
 (null, 'Grêmio'),
 (null, 'Sport'),
 (null, 'Chapecoense');
+
+
+select cadastro.nome as 'Nome torcedor', cadastro.email as 'Email do torcedor', cadastro.senha 'Senha do torcedor',
+times.nome_do_time as 'Nome do Time' from cadastro join times on fktimes = idTimes;
+
+select * from cadastro  right join times on fktimes = idTimes;

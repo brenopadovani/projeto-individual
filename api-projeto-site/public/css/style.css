@@ -342,6 +342,15 @@ form {
   justify-content: center;
   background-color: #2f9600;
 }
+.cardmedio h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+}
+
+
 .cardmedio select {
   border-radius: 10px;
   height: 35px;
@@ -397,4 +406,8 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container {
+  text-align: center;
 }

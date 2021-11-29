@@ -17,7 +17,7 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body onload="tudo()">
 
     <!--Header-->
 
@@ -46,7 +46,8 @@
     <div class="banner-login">
         <div class="container">
             <div class="card medio">
-                <h1>Olá de volta!</h1>
+                <h1>Olá de volta! <br>
+                Já temos  <b id="numcad"></b>  Usuários Cadastrados</h1>
                 <h2>Login</h2>
                 <div class="formulario">
                     <form id="form_login" method="post" onsubmit="return entrar()">
@@ -169,4 +170,40 @@
         return false;
     }
 
+    function tudo() {
+        fetch("/usuarios/listar", {
+            method: "GET",
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                 var tamanho = json.length
+
+                 numcad.innerHTML = tamanho
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    
 </script>
